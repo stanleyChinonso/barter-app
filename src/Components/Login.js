@@ -4,38 +4,6 @@ import { Link } from 'react-router-dom';
 import LogoText from './images/LogoText.png';
 
 const Login = () => {
-    // const [errorMessages, setErrorMessages] = useState({});
-    // const [isSubmitted, setIsSubmitted] = useState(false);
-
-    // const errors = {
-    //     email: "invalid email/phone number",
-    //     psw: "invalid password"
-    // };
-
-    // const submitHandler = (e) => {
-    //     e.preventDefault();
-
-    //     var {email, psw} = document.forms[0];
-
-    //     const userDetails = form.find((user) => user.email_address === email.value);
-
-    //     if (userDetails) {
-    //         if (userDetails.psw !== psw.value) {
-    //             setErrorMessages({name: "psw", message:errors.psw});
-    //         } else {
-    //             setIsSubmitted(true);
-    //         }
-    //     } else {
-    //         setErrorMessages({name: "email", message:errors.email});
-    //     }
-        
-    // };
-
-    // const renderErrorMessage = (name) => {
-    //     name === errorMessages.name && (
-    //         <div className="error">{errorMessages.message}</div>
-    //     );
-    // };
     
     // Form Validation 
     const [formValid, setFormValid] = useState({});
@@ -64,7 +32,6 @@ const Login = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        sessionStorage.setItem('userDetails', JSON.stringify({...form}))
 
         setTimeout(() => {
             window.location="/"
@@ -89,17 +56,15 @@ const Login = () => {
                     <div>
                         <label htmlFor='email'>email address / phone number</label>
                         <input type='text' name='email' required onChange={handleChange}/>
-                        {/* {renderErrorMessage('email')} */}
                     </div>
                     <div>
                         <label htmlFor='psw'>enter your password</label>
                         <input type='password' name='psw' required onChange={handleChange}/>
-                        {/* {renderErrorMessage('psw')} */}
                     </div>
                     <a href='#'><p>Forgot password?</p></a>
                     <button className= {formValid?"auth_login-active":"auth_login-submit"}>Log in</button>
                     <h4>Don't have an account? 
-                        <Link to='/createaccount'><a> Register</a></Link>
+                        <Link to='/signup'><a> Register</a></Link>
                     </h4>
                 </form>
                 </div>

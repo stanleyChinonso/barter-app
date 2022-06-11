@@ -1,15 +1,15 @@
-import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
+// import React from 'react'
+// import { Navigate, Outlet } from 'react-router-dom'
 
-const userAuth = () => {
-    let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
-    return userDetails
-}
+// const userAuth = () => {
+//     let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
+//     return userDetails
+// }
 
-const ProtectedRoutes = () => {
-    const isAuth = userAuth()
+// const ProtectedRoutes = () => {
+//     const isAuth = userAuth()
 
-    return  isAuth ? <Outlet /> : <Navigate to='/signup' />
-}
+//     return  isAuth ? <Outlet /> : <Navigate to='/signup' />
+// }
 
-export default ProtectedRoutes
+// export default ProtectedRoutes
