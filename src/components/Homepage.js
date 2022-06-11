@@ -6,7 +6,8 @@ const Homepage = () => {
   return (
     <div className='homepage'>
         <Navbar />
-        Homepage</div>
+        Homepage
+    </div>
   )
 }
 
