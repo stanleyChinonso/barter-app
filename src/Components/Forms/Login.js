@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Forms.css'
+import { Link } from 'react-router-dom';
 import LogoText from '../Images/LogoText.png';
 
 const Login = () => {
@@ -91,7 +92,9 @@ const Login = () => {
                     </div>
                     <a href='#'><p>Forgot password?</p></a>
                     <button className= {formValid?"auth_login-active":"auth_login-submit"}>Log in</button>
-                    <h4>Don't have an account? <a href='#' className='signup'>Register</a></h4>
+                    <h4>Don't have an account? 
+                        <Link to='/createaccount'><a> Register</a></Link>
+                    </h4>
                 </form>
                 </div>
             </div>

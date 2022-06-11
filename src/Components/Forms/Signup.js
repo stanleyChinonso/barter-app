@@ -90,7 +90,50 @@ const Signup = () => {
                     <div className='row'>
                         <div>
                             <label for='country'>country</label>
-                            <input type='text' name='country' onChange={handleChange}/>
+                            {/* <input type='text' name='country' onChange={handleChange}/> */}
+                            <select className='country' required>
+                                <option value='' selected>Select Country</option>
+                                <option value='NG'>Nigeria</option>
+                                <option value='USA'>United States</option>
+                                <option value='UK'>United Kingdom</option>
+                                <option value='IR'>Ireland</option>
+                                <option value='GH'>Ghana</option>
+                                <option value='KE'>Kenya</option>
+                                <option value='UG'>Uganda</option>
+                                <option value='CAM'>Cameroon</option>
+                                <option value='CI'>Cote d'Ivoire</option>
+                                <option value='FR'>France</option>
+                                <option value='GER'>Germany</option>
+                                <option value='IT'>Italy</option>
+                                <option value='VI'>Vietnam</option>
+                                <option value='BU'>Burkina Faso</option>
+                                <option value='SE'>Senegal</option>
+                                <option value='SA'>South Africa</option>
+                                <option value='HU'>Hungary</option>
+                                <option value='BE'>Belgium</option>
+                                <option value='SW'>Sweden</option>
+                                <option value='SP'>Spain</option>
+                                <option value='SL'>Slovakia</option>
+                                <option value='GR'>Greece</option>
+                                <option value='RO'>Romania</option>
+                                <option value='SV'>Slovenia</option>
+                                <option value='LU'>Luxembourg</option>
+                                <option value='CR'>Croatia</option>
+                                <option value='ES'>Estonia</option>
+                                <option value='PO'>Portugal</option>
+                                <option value='FI'>Finland</option>
+                                <option value='MA'>Malta</option>
+                                <option value='CY'>Cyprus</option>
+                                <option value='CZ'>Czechia</option>
+                                <option value='NE'>Netherlands</option>
+                                <option value='PL'>Poland</option>
+                                <option value='LI'>Lithunia</option>
+                                <option value='BU'>Bulgaria</option>
+                                <option value='DE'>Denmark</option>
+                                <option value='AS'>Austria</option>
+                                <option value='CA'>Canada</option>
+                                <option value='UO'>United States MINOR outlying Islands</option>
+                            </select>
                         </div>
                         <div>
                             <label for='ref'>referral code</label>
@@ -99,7 +142,7 @@ const Signup = () => {
                     </div>
                     <button className= {formValid?"auth_signup-active":"auth_signup-submit"}>Create account</button>
                     <h4>Already have an account?  
-                        <a> Login</a>
+                        <Link to='/login'><a> Login</a></Link>
                     </h4>
                 </form>
             </div>
