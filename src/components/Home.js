@@ -4,10 +4,9 @@ import Homepage from './Homepage'
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
         <Header />
         <Homepage />
-        this is the main home
     </div>
   )
 }

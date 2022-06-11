@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from './images/barterLogo.png'
 import './navbar.css'
 
+
 const Navbar = () => {
   return (
     <div className='navbar'>
@@ -11,10 +12,11 @@ const Navbar = () => {
       </div>
       <div className='nav-link'>
         <ul>
-          <li>student ambassador</li>
-          <li>support</li>
-          <li>log in</li>
-          <li>create account</li>
+        
+          <Link to='/'><li>student ambassador</li></Link>
+          <Link to='/'><li>support</li></Link>
+          <Link to='login'><li>log in</li></Link>
+          <Link to='signup'><li>create account</li></Link>
         </ul>
 
       </div>
