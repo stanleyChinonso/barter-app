@@ -6,7 +6,17 @@ const Homepage = () => {
   return (
     <div className='homepage'>
         <Navbar />
-        Homepage</div>
+        <div className='homepage-box'>
+          <div><h1></h1></div>
+          <div><h2></h2></div>
+          <div className='hompage-buttons'>
+            <div className='google-play'></div>
+            <div className='apple-store'></div>
+          </div>
+
+        </div>
+        this is the Homepage containing the navbar
+      </div>
   )
 }
 
