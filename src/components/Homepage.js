@@ -15,8 +15,9 @@ const Homepage = () => {
           </div>
 
         </div>
-        this is the Homepage containing the navbar
-      </div>
+        this is the Homepage containing the navba
+
+    </div>
   )
 }
 

@@ -5,8 +5,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import LogIn from './components/LogIn';
-import CreatAccount from './components/CreatAccount';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/login' element={<LogIn />}></Route>
-          <Route path='/createaccount' element={<CreatAccount />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
         </Routes>
       </BrowserRouter>
   
