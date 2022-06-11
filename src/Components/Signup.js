@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import LogoText from '../Images/LogoText.png'
+import LogoText from './images/LogoText.png'
 import './Forms.css'
 
 const Signup = () => {
+    // Form Validation 
     const [formValid, setFormValid] = useState(false)
     const [form, setForm] = useState({
         fname: "",
@@ -50,11 +51,17 @@ const Signup = () => {
 
   return (
     <div className='main'>
+
+        {/* Main Container  */}
         <div className='container-2'>
+
+            {/* Logo and Title Section  */}
             <div className='logo-title'>
                 <img src={LogoText}  alt=''/>
                 <h1 className='title'>Create your barter account</h1>
             </div>
+
+            {/* Form Section  */}
             <div className='form-container'>
                 <form  className='form' onSubmit={submitHandler}>
                     <div className='row'>
@@ -90,8 +97,7 @@ const Signup = () => {
                     <div className='row'>
                         <div>
                             <label for='country'>country</label>
-                            {/* <input type='text' name='country' onChange={handleChange}/> */}
-                            <select className='country' required>
+                            <select className='country' required onChange={handleChange}>
                                 <option value='' selected>Select Country</option>
                                 <option value='NG'>Nigeria</option>
                                 <option value='USA'>United States</option>
@@ -101,7 +107,7 @@ const Signup = () => {
                                 <option value='KE'>Kenya</option>
                                 <option value='UG'>Uganda</option>
                                 <option value='CAM'>Cameroon</option>
-                                <option value='CI'>Cote d'Ivoire</option>
+                                <option value='CI'>Côte d'Ivoire</option>
                                 <option value='FR'>France</option>
                                 <option value='GER'>Germany</option>
                                 <option value='IT'>Italy</option>
