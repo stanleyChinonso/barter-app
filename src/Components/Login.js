@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './Forms.css'
-import LogoText from '../Images/LogoText.png';
+import { Link } from 'react-router-dom';
+import LogoText from './images/LogoText.png';
 
 const Login = () => {
     // const [errorMessages, setErrorMessages] = useState({});
@@ -36,6 +37,7 @@ const Login = () => {
     //     );
     // };
     
+    // Form Validation 
     const [formValid, setFormValid] = useState({});
     const [form, setForm] = useState({
         email: "",
@@ -71,11 +73,16 @@ const Login = () => {
 
   return (
     <div className='main'>
+        {/* Main Container  */}
         <div className='container'>
+
+            {/* Logo and Title Section  */}
             <div className='logo-title'>
                 <img className='logo' src={LogoText} alt=''/>
                 <h1 className='title'>Login to your barter account</h1>
             </div>
+
+            {/* Form Section  */}
             <div className='form-container'>
                 <div>
                 <form className='form' onSubmit={submitHandler}>
@@ -91,7 +98,9 @@ const Login = () => {
                     </div>
                     <a href='#'><p>Forgot password?</p></a>
                     <button className= {formValid?"auth_login-active":"auth_login-submit"}>Log in</button>
-                    <h4>Don't have an account? <a href='#' className='signup'>Register</a></h4>
+                    <h4>Don't have an account? 
+                        <Link to='/createaccount'><a> Register</a></Link>
+                    </h4>
                 </form>
                 </div>
             </div>
